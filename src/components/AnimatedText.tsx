@@ -27,7 +27,7 @@ export function AnimatedText({
 }): React.ReactElement {
   const animatedProps = useAnimatedProps(() => {
     return {
-      text: `${label}${text.value.toFixed(0)}`,
+      text: `${label}${text.value.toFixed(1)}`,
     } as unknown as TextInputProps;
   });
 
@@ -35,7 +35,7 @@ export function AnimatedText({
     <AnimatedTextInput
       underlineColorAndroid="transparent"
       editable={false}
-      value={`${label}${text.value.toFixed(0)}`}
+      value={`${label}${text.value.toFixed(1)}`}
       style={[styles.text, style]}
       animatedProps={animatedProps}
     />
